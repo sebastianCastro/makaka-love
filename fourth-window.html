@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Start https://www.cursors-4u.com */ 
+        * {cursor: url(https://ani.cursors-4u.net/symbols/sym-8/sym752.cur), auto !important;} 
+        /* End https://www.cursors-4u.com */
+
+        html {
+            -webkit-font-smoothing: none;
+            text-rendering: optimizeLegibility;
+            image-rendering: pixelated;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url("https://www.cameronsworld.net/img/content/31/rainbow/bg.jpg");
+            margin: 0; /* Remove default body margin */
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        #container {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative; /* Ensure container is positioned for absolute child */
+            width: 100%; /* Ensure container takes full width */
+        }
+
+        @keyframes ani-float-left {
+            0% {
+                left: -20%; /* Start off-screen to the right */
+            }
+            100% {
+                left: 140%; /* Move off-screen to the left */
+            }
+        }
+
+        .floating-img {
+            position: absolute; /* Position the image absolutely within the container */
+            height: 31px;
+            width: 31px;
+            animation: ani-float-left 15s linear infinite; /* Adjusted duration for testing */
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+            <p style="color: #ef4da5; font-size: 45px; width: 50%;">
+                And sorry to say so, but you're more <i><u>cute</u></i> than <s>cool</s>
+            </p>
+        </div>
+        <img src="https://www.cameronsworld.net/img/sprites/sprite31/rainbow.png" alt="" class="floating-img" style="top: 50%;">
+        <img src="https://www.cameronsworld.net/img/content/31/rainbow/6.gif" alt="" class="floating-img" style="top: 60%; animation-delay: 2s;">
+        <img src="https://www.cameronsworld.net/img/content/31/rainbow/7.gif" alt="" class="floating-img" style="top: 40%; animation-delay: 6s;">
+        <img src="https://www.cameronsworld.net/img/content/31/rainbow/9.gif" alt="" class="floating-img" style="top: 50%; animation-delay: 1s;">
+        <img src="https://www.cameronsworld.net/img/content/31/rainbow/10.gif" alt="" class="floating-img" style="top: 70%; animation-delay: 4s;">
+        <img src="https://www.cameronsworld.net/img/content/31/rainbow/11.gif" alt="" class="floating-img" style="top: 54%; animation-delay: 9s;">
+        <img src="https://www.cameronsworld.net/img/content/31/rainbow/2.gif" alt="" class="floating-img" style="top: 63%; animation-delay: 12s;">
+    </div>
+</body>
+</html>
